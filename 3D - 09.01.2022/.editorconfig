@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# CS0162: Ulaşılamayan kod algılandı
+dotnet_diagnostic.CS0162.severity = suggestion
