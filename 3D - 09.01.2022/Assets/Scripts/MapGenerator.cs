@@ -85,12 +85,19 @@ public class MapGenerator : MonoBehaviour
         all_camps = new GameObject[camp_amount];
         all_trees = new GameObject[tree_amount];
 
+        int number_of_times_max_loop_was_reached = 0;
+
         for (int i = 0; i < camp_amount; i++)
         {
             float camp_width = camp.transform.localScale.x; //assuming that it is a squre, no need to get "y" scale
             int while_counter = 0;
-            while (while_counter < max_while_loop)
+            while (true)
             {
+                if (while_counter > max_while_loop)
+                {
+                    number_of_times_max_loop_was_reached++;
+                    break;
+                }
                 while_counter++;
                 bool continue_true = false;
 
@@ -150,8 +157,13 @@ public class MapGenerator : MonoBehaviour
         {
             float tree_width = tree.transform.localScale.x;
             int while_counter = 0;
-            while (while_counter < max_while_loop)
+            while (true)
             {
+                if (while_counter > max_while_loop)
+                {
+                    number_of_times_max_loop_was_reached++;
+                    break;
+                }
                 while_counter++;
                 bool continue_true = false;
 
@@ -207,6 +219,8 @@ public class MapGenerator : MonoBehaviour
                 break;
             }
         }
+
+        print(string.Format("Max loop was reached {0} times", number_of_times_max_loop_was_reached));
     }
 
     bool IsPointInCircle(Vector3 point, Vector3 target, float radius)
