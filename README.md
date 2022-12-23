@@ -1,8 +1,11 @@
 # ProceduralMapGenerator
  
-Procedural Map Generator Prototype, mainly made to use as forest map creator in a strategy game.
+Procedural Map Generator Prototype, mainly made to use as forest map creator in a strategy game with Unity Game Engine.
 
-Unity Editor Version: [2020.3.22f1](https://unity.com/releases/editor/whats-new/2020.3.22)
+## Setup
+
+The folder "3D - 09.01.2022" is the main Unity Project. After you clone or dowload the repository, you can select that folder in Unity Hub and open the project.
+Beware that used Unity Editor version of this project is [2020.3.22f1](https://unity.com/releases/editor/whats-new/2020.3.22).
 
 ## It Consist...
 
