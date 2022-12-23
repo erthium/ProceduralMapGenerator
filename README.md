@@ -10,6 +10,10 @@ Unity Editor Version: [2020.3.22f1](https://unity.com/releases/editor/whats-new/
 
 A basic Mesh Generator made by using Perlin Noise, to be able to create a smooth and continues land shape. 
 
+<img src="https://github.com/ErtyumPX/ProceduralMapGenerator/blob/main/Images/mesh_generator_1.JPG" width=50% height=50%>
+<img src="https://github.com/ErtyumPX/ProceduralMapGenerator/blob/main/Images/mesh_generator_2.JPG" width=50% height=50%>
+
+
 The built-in function that has been used for perlin noise
 
 ```c#
