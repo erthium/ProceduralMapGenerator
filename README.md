@@ -28,7 +28,7 @@ UnityEngine.Mathf.PerlinNoise
 
 After the land has been generated, comes the part where we locate the chosen amount of objects on the land. In this case, since it was a map for camp sides in the forest, our surroundings will be camps and trees. To inpersonate them in the prototype, there are simple wide and long rectangles.
 
-We can adjust the offset between the entities. You can change the difference in the images below.
+We can adjust the offset between the entities. You can see the difference in the images below, with the Editor values of offsets(radius) and amounts.
 
 <p align="center">
   <img src="https://github.com/ErtyumPX/ProceduralMapGenerator/blob/main/Images/map_generator_1.JPG" width=50% height=50%>
