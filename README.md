@@ -21,7 +21,7 @@ A basic Mesh Generator made by using Perlin Noise, to be able to create a smooth
 The built-in function that has been used for perlin noise
 
 ```c#
-UnityEngine.Mathf.PerlinNoise
+UnityEngine.Mathf.PerlinNoise();
 ```
 
 ### Map Generator
