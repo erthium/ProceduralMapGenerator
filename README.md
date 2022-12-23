@@ -1,4 +1,4 @@
-# ProceduralMapGenerator
+# Procedural Map Generator
  
 Procedural Map Generator Prototype, mainly made to use as forest map creator in a strategy game with Unity Game Engine.
 
