@@ -55,3 +55,8 @@ We can adjust the offset between the entities. You can see the difference in the
   <img src="https://github.com/ErtyumPX/ProceduralMapGenerator/blob/main/Images/map_generator_2.JPG" width=50% height=50%>
   <img src="https://github.com/ErtyumPX/ProceduralMapGenerator/blob/main/Images/map_generator_3.JPG" width=50% height=50%>
 </p>
+
+## License
+
+Copyright © 2019 Franck Abgrall.
+This project is [MIT](https://github.com/ErtyumPX/ProceduralMapGenerator/blob/main/LICENSE) licensed.
