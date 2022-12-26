@@ -58,5 +58,4 @@ We can adjust the offset between the entities. You can see the difference in the
 
 ## License
 
-Copyright © 2019 Franck Abgrall.
 This project is [MIT](https://github.com/ErtyumPX/ProceduralMapGenerator/blob/main/LICENSE) licensed.
