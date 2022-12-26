@@ -2,6 +2,10 @@
  
 Procedural Map Generator Prototype, mainly made to use as a forest map creator in a strategy game with Unity Game Engine.
 
+## License
+
+This project is [MIT](https://github.com/ErtyumPX/ProceduralMapGenerator/blob/main/LICENSE) licensed.
+
 ## Setup
 
 The folder "3D - 09.01.2022" is the main Unity Project. After you clone or download the repository, you can select that folder in Unity Hub and open the project.
@@ -55,7 +59,3 @@ We can adjust the offset between the entities. You can see the difference in the
   <img src="https://github.com/ErtyumPX/ProceduralMapGenerator/blob/main/Images/map_generator_2.JPG" width=50% height=50%>
   <img src="https://github.com/ErtyumPX/ProceduralMapGenerator/blob/main/Images/map_generator_3.JPG" width=50% height=50%>
 </p>
-
-## License
-
-This project is [MIT](https://github.com/ErtyumPX/ProceduralMapGenerator/blob/main/LICENSE) licensed.
