@@ -13,6 +13,6 @@ public class Manager : MonoBehaviour
         bool current_condition = side_menu_animator.GetBool("open");
         is_side_menu_open = !is_side_menu_open;
         side_menu_animator.SetBool("open", is_side_menu_open);
-        //side_menu_slide_button.transform.rotation.y 
+        //side_menu_slide_button.transform.rotation.y
     }
 }
