@@ -32,6 +32,7 @@ public class MapGenerator : MonoBehaviour
     int max_while_loop = 2000;
 
 
+
     public void Clear()
     {
         for (int i = 0; i < parent_objects.transform.childCount; i++)
@@ -67,6 +68,7 @@ public class MapGenerator : MonoBehaviour
 
     public void Generate()
     {
+        //destroy old objects
         foreach (GameObject item in all_camps)
         {
             if (item)
@@ -74,6 +76,7 @@ public class MapGenerator : MonoBehaviour
                 Destroy(item);
             }
         }
+        //destroy old objects
         foreach (GameObject item in all_trees)
         {
             if (item)
@@ -135,20 +138,83 @@ public class MapGenerator : MonoBehaviour
                 GameObject new_camp = Instantiate(camp, parent_objects.transform);
                 new_camp.transform.position = new_position;
 
-
-
-                Ray ray = new Ray(new_camp.transform.GetChild(0).position, Vector3.down);
-
-                if (Physics.Raycast(ray, out RaycastHit hit, 100, land_layer_mask))
+                // rotate process
+                for (int repeat = 0; repeat < 5; repeat++)
                 {
-                    new_camp.transform.position -= Vector3.up * (hit.distance);
+                    Vector3 ray_1_pos = new_camp.transform.GetChild(1).position;
+                    Vector3 ray_2_pos = new_camp.transform.GetChild(2).position;
+                    Vector3 ray_3_pos = new_camp.transform.GetChild(3).position;
+                    Vector3 ray_4_pos = new_camp.transform.GetChild(4).position;
+
+
+                    Ray ray_1 = new Ray(ray_1_pos, Vector3.down);
+                    Ray ray_2 = new Ray(ray_2_pos, Vector3.down);
+                    Ray ray_3 = new Ray(ray_3_pos, Vector3.down);
+                    Ray ray_4 = new Ray(ray_4_pos, Vector3.down);
+
+                    float ray_1_height = 0;
+                    float ray_2_height = 0;
+                    float ray_3_height = 0;
+                    float ray_4_height = 0;
+
+                    if (Physics.Raycast(ray_1, out RaycastHit hit_1, 100, land_layer_mask))
+                    {
+                        ray_1_height = hit_1.distance;
+                    }
+                    else { Debug.Log("Ray 1 was not hit!"); }
+                    if (Physics.Raycast(ray_2, out RaycastHit hit_2, 100, land_layer_mask))
+                    {
+                        ray_2_height = hit_2.distance;
+                    }
+                    else { Debug.Log("Ray 2 was not hit!"); }
+                    if (Physics.Raycast(ray_3, out RaycastHit hit_3, 100, land_layer_mask))
+                    {
+                        ray_3_height = hit_3.distance;
+                    }
+                    else { Debug.Log("Ray 3 was not hit!"); }
+                    if (Physics.Raycast(ray_4, out RaycastHit hit_4, 100, land_layer_mask))
+                    {
+                        ray_4_height = hit_4.distance;
+                    }
+                    else { Debug.Log("Ray 4 was not hit!"); }
+
+                    print(string.Format("Ray 1 Height {0}\nRay 2 Height {1}\nRay 3 Height {2}\nRay 4 Height {3}", ray_1_height, ray_2_height, ray_3_height, ray_4_height));
+
+                    // adjusting X rotation
+                    float slope1_4 = (ray_1_height - ray_4_height) / (ray_1_pos.z - ray_4_pos.z);
+                    print(ray_1_pos.x - ray_4_pos.x);
+                    float angle1_4 = Mathf.Atan(slope1_4) * Mathf.Rad2Deg;
+                    float slope2_3 = (ray_2_height - ray_3_height) / (ray_2_pos.z - ray_3_pos.z);
+                    //print(string.Format("Slopes: {0} & {1}", slope1_4, slope2_3));
+                    float angle2_3 = Mathf.Atan(slope2_3) * Mathf.Rad2Deg;
+                    //print(string.Format("Angles for X: {0} & {1}", angle1_4, angle2_3));
+                    float average_X_angle = (angle1_4 + angle2_3) / 2;
+                    //print(string.Format("Average X: {0}", average_X_angle));
+                    new_camp.transform.Rotate(average_X_angle, 0, 0);
+
+                    // adjusting Z rotation
+                    float angle1_2 = Mathf.Atan((ray_1_height - ray_2_height) / (ray_1_pos.x - ray_2_pos.x)) * Mathf.Rad2Deg;
+                    float angle4_3 = Mathf.Atan((ray_4_height - ray_3_height) / (ray_4_pos.x - ray_3_pos.x)) * Mathf.Rad2Deg;
+                    //print(string.Format("Angles for Z: {0} & {1}", angle1_2, angle4_3));
+                    float average_Z_angle = (angle1_2 + angle4_3) / 2;
+                    //print(string.Format("Average Z: {0}", average_Z_angle));
+                    new_camp.transform.Rotate(0, 0, -average_Z_angle);
+                }
+
+                Ray ray_0 = new Ray(new_camp.transform.GetChild(0).position, Vector3.down);
+                if (Physics.Raycast(ray_0, out RaycastHit hit_0, 100, land_layer_mask))
+                {
+                    new_camp.transform.position -= Vector3.up * (hit_0.distance);
                     all_camps[i] = new_camp;
                 }
-                else 
+                else
                 {
+                    Debug.Log("Not even a hit to the mesh, for the camp!!");
                     Destroy(new_camp);
-                    continue; 
+                    continue;
                 }
+
+
                 break;
             }
         }
