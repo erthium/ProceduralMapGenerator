@@ -4,11 +4,12 @@ Procedural Map Generator Prototype, mainly made to use as a forest map creator i
 
 ## License
 
-This project is [MIT](https://github.com/ErtyumPX/ProceduralMapGenerator/blob/main/LICENSE) licensed.
+This project is lisenced under [MIT 2022](https://github.com/ErtyumPX/ProceduralMapGenerator/blob/main/LICENSE) license.
 
 ## Setup
 
 The folder "3D - 09.01.2022" is the main Unity Project. After you clone or download the repository, you can select that folder in Unity Hub and open the project.
+
 Beware that used Unity Editor version of this project is [2020.3.22f1](https://unity.com/releases/editor/whats-new/2020.3.22).
 
 ## It Consists...
