@@ -63,5 +63,5 @@ We can adjust the offset between the entities. You can see the difference in the
 Objects are placed considering the slope of the proceduraly generated mesh, by sending rays from four edges of the object and calculating the optimal slope. This helps the algorithm to make the placing process more natural.
 
 <p align="center">
-  <img src="https://github.com/ErtyumPX/ProceduralMapGenerator/blob/main/Images/generator_3.JPG" width=50% height=50%>
+  <img src="https://github.com/ErtyumPX/ProceduralMapGenerator/blob/main/images/generator_3.JPG" width=50% height=50%>
 </p>
