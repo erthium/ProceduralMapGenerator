@@ -8,7 +8,7 @@ This project is lisenced under [MIT 2022](https://github.com/ErtyumPX/Procedural
 
 ## Setup
 
-The folder "3D - 09.01.2022" is the main Unity Project. After you clone or download the repository, you can select that folder in Unity Hub and open the project.
+The directory 'project' is the main Unity Project. After you clone or download the repository, you can select that folder in Unity Hub and open the project.
 
 Beware that used Unity Editor version of this project is [2020.3.22f1](https://unity.com/releases/editor/whats-new/2020.3.22).
 
