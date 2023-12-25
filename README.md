@@ -19,8 +19,8 @@ Beware that used Unity Editor version of this project is [2020.3.22f1](https://u
 A basic Mesh Generator made by using Perlin Noise, to be able to create a smooth and continues land shape. 
 
 <p align="center">
-  <img src="https://github.com/ErtyumPX/ProceduralMapGenerator/blob/main/Images/mesh_generator_1.JPG" width=50% height=50%>
-  <img src="https://github.com/ErtyumPX/ProceduralMapGenerator/blob/main/Images/mesh_generator_2.JPG" width=50% height=50%>
+  <img src="https://github.com/ErtyumPX/ProceduralMapGenerator/blob/main/images/mesh_generator_1.JPG" width=50% height=50%>
+  <img src="https://github.com/ErtyumPX/ProceduralMapGenerator/blob/main/images/mesh_generator_2.JPG" width=50% height=50%>
 </p>
 
 The built-in function that has been used for perlin noise
@@ -56,8 +56,8 @@ After the land has been generated, comes the part where we locate the chosen amo
 We can adjust the offset between the entities. You can see the difference in the images below, with the Editor values of offsets(radius) and amounts.
 
 <p align="center">
-  <img src="https://github.com/ErtyumPX/ProceduralMapGenerator/blob/main/Images/generator_1.JPG" width=50% height=50%>
-  <img src="https://github.com/ErtyumPX/ProceduralMapGenerator/blob/main/Images/generator_2.JPG" width=50% height=50%>
+  <img src="https://github.com/ErtyumPX/ProceduralMapGenerator/blob/main/images/generator_1.JPG" width=50% height=50%>
+  <img src="https://github.com/ErtyumPX/ProceduralMapGenerator/blob/main/images/generator_2.JPG" width=50% height=50%>
 </p>
 
 Objects are placed considering the slope of the proceduraly generated mesh, by sending rays from four edges of the object and calculating the optimal slope. This helps the algorithm to make the placing process more natural.
